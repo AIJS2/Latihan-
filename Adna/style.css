@@ -1,0 +1,199 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* matiin scroll */
+}
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #111;
+  user-select: none; /* Mencegah teks bisa di-select/highlight */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 65px 0px;
+  font-size: 18px;
+  position: relative; /* supaya .vertical-wrapper bisa absolute di dalam header */
+}
+
+/* Navbar links */
+.navbar nav a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 60px;
+}
+.navbar nav a:hover {
+  text-decoration: underline;
+}
+
+/* Email */
+.email {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-style: italic;
+  position: absolute;
+  right: 100px; /* geser dari kanan */
+  top: 50%;
+  transform: translateY(-50%); /* biar tetap rata tengah vertikal */
+}
+
+/* Vertical text © 2025 */
+.vertical-wrapper {
+  position: absolute;
+  top: -40px; /* bikin nongol setengah ke atas */
+  left: 65%;
+  transform: translateX(-50%);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  font-size: 80px;
+  font-weight: 550;
+  color: #000;
+  letter-spacing: 1.4px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px;
+  min-height: 80vh;
+}
+
+/* Left side */
+.hero-left {
+  flex: 1;
+}
+.hero-left .welcome {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+}
+.hero-left .adna {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+.hero-left .highlight {
+  background: #e2886d;
+  color: #fff;
+  display: inline-block;
+  padding: 2px 12px;
+}
+
+/* Right side */
+.hero-right {
+  flex: 1;
+  text-align: right;
+  position: relative;
+}
+
+/* tagline besar */
+.tagline {
+  position: relative;
+  left: -220px; /* geser ke kiri */
+  top: 250px; /* geser ke bawah */
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* brand block */
+.brand-block {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* bikin semua konten di tengah */
+}
+
+/* ADNA. horizontal */
+.brand {
+  font-weight: bold;
+  color: #e2886d;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 8px; /* kasih jarak ke tagline */
+}
+
+/* tagline kecil vertikal */
+.brand-tagline {
+  writing-mode: vertical-rl;
+  text-align: justify; /* rata justify */
+  font-size: 10px;
+  color: #000;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* ================================== */
+/*        SLIDER STYLES (FIXED)       */
+/* ================================== */
+
+/* Wadah utama (TIDAK BERUBAH) */
+.slider-container {
+  position: fixed;
+  bottom: 50px;
+  left: 60px;
+  z-index: 10;
+}
+
+/* Teks di atas slider (TIDAK BERUBAH) */
+.slider-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  color: #aaa;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-left: 2px;
+  margin-bottom: 12px;
+}
+
+/* Pembungkus slider (TIDAK BERUBAH) */
+.slider {
+  position: relative;
+  width: 200px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Garis background (TIDAK BERUBAH) */
+.slider-track {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* INI YANG KITA UBAH TOTAL */
+.slider-handle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background-color: #000;
+  transform: translateY(-50%);
+
+  /* HAPUS ATAU KOMENTARI BARIS DI BAWAH INI */
+  /* transition: left 0.4s cubic-bezier(0.76, 0, 0.24, 1); */
+}
